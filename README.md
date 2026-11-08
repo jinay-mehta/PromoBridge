@@ -2,7 +2,11 @@
 
 **PromoBridge maps a promotional creative to the most likely canonical show and episode, displays the screenplay evidence that supports the match, flags uncertainty, and exports a traceable handoff manifest.**
 
-> **Screenplay Pack Note:** The prototype now ships with the actual **Kuku screenplay pack** for *"I Married a Broken Soldier. He was a Duke"* (50 episodes, 2,000+ evidence spans with scene timestamps and character dialogue beats), plus 11 synthetic benchmark episodes across three other shows. You can also upload custom screenplay files or full ZIP packs in the Catalogue tab.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=jinay-mehta/PromoBridge&branch=main&mainModule=app.py)  
+🚀 **Live Prototype Deployment:** [Launch PromoBridge on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=jinay-mehta/PromoBridge&branch=main&mainModule=app.py)  
+📦 **GitHub Repository:** [https://github.com/jinay-mehta/PromoBridge](https://github.com/jinay-mehta/PromoBridge)
+
+> **Screenplay Pack Note:** The prototype ships with the actual **Kuku screenplay pack** for *"I Married a Broken Soldier. He was a Duke"* (50 episodes, 2,000+ evidence spans with scene timestamps and character dialogue beats), plus 11 synthetic benchmark episodes across three other shows. You can also upload custom screenplay files or full ZIP packs in the Catalogue tab.
 
 ## 1. What it solves
 
@@ -193,7 +197,7 @@ Add `--semantic` after installing `requirements-semantic.txt` to use local embed
 ## 11. Privacy and responsible use
 
 - App matching is local by default; do not upload confidential scripts to public hosting.
-- Optional external model calls are disabled by default and gated by explicit consent.
+- 100% deterministic local Python pipeline; zero external LLM API calls or third-party data sharing.
 - Do not commit `.env`, Streamlit secrets, private screenplays, or raw outputs containing restricted source text.
 - Preserve input originals; only parsed and normalized derived records are used for retrieval.
 - A human remains responsible for approving campaign mappings.

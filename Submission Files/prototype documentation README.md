@@ -2,7 +2,11 @@
 
 **PromoBridge maps a promotional creative to the most likely canonical show and episode, displays the screenplay evidence that supports the match, flags uncertainty, and exports a traceable handoff manifest.**
 
-> **Demo-data note:** The project currently ships with 11 synthetic screenplay episodes across three fictional shows and a 30-case synthetic evaluation set. They are not Kuku content, not based on Kuku's confidential screenplay pack, and not production performance data. Load permitted screenplays in the app to test a real catalogue locally.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=jinay-mehta/PromoBridge&branch=main&mainModule=app.py)  
+🚀 **Live Prototype Deployment:** [Launch PromoBridge on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=jinay-mehta/PromoBridge&branch=main&mainModule=app.py)  
+📦 **GitHub Repository:** [https://github.com/jinay-mehta/PromoBridge](https://github.com/jinay-mehta/PromoBridge)
+
+> **Screenplay Pack Note:** The prototype ships with the actual **Kuku screenplay pack** for *"I Married a Broken Soldier. He was a Duke"* (50 episodes, 2,000+ evidence spans with scene timestamps and character dialogue beats), plus 11 synthetic benchmark episodes across three other shows. You can also upload custom screenplay files or full ZIP packs in the Catalogue tab.
 
 ## 1. What it solves
 
@@ -12,8 +16,8 @@ The prototype does **not** diagnose Kuku's internal root cause, repair the consu
 
 ## 2. Features
 
-- Load a built-in synthetic catalogue or upload one screenplay file per episode.
-- Supported input formats: TXT, Markdown, DOCX, PDF and JSON.
+- Load the built-in 61-episode catalogue (including 50 episodes of Kuku's *I Married a Broken Soldier. He was a Duke*) or upload screenplay files / ZIP packs.
+- Supported input formats: TXT, Markdown, DOCX, PDF, JSON, and ZIP packs.
 - Infer show / episode IDs from filenames such as `Show Title - E01 - Episode Title.txt`; edit canonical metadata in the Catalogue tab.
 - Parse timestamps and scene boundaries into evidence spans with stable `evidence_id` values and original line offsets.
 - Paste a promo transcript, ad caption, displayed title, platform, language and territory.
@@ -24,7 +28,7 @@ The prototype does **not** diagnose Kuku's internal root cause, repair the consu
 - Export a campaign manifest as CSV and the full traceability run as JSON.
 - Run a 30-case synthetic gold set and export metrics / case-level results.
 - Optional local `all-MiniLM-L6-v2` semantic retrieval for paraphrases (install separately); deterministic lexical retrieval remains the default.
-- Optional provider-agnostic OpenAI-compatible LLM verifier. Off by default, requires an API key plus explicit in-app consent, and cannot promote a weak match.
+- 100% private and deterministic by default: operates locally without external LLM API keys or data-sharing requirements.
 
 ## 3. Quick start (Windows)
 
@@ -53,14 +57,19 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-### Sample demo input
+### Sample demo inputs
 
+**1. Actual Kuku Screenplay Pack:**
+- Displayed title: `I Married a Broken Soldier`
+- Transcript: `You let me believe I was walking toward my husband!`
+- Expected result: `I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_001`, status `VERIFIED`.
+
+**2. Synthetic Catalogue:**
 - Displayed title: `The Last Promise`
 - Transcript: `Stop the ceremony! This groom is already married.`
 - Expected result: `THE_LAST_PROMISE_EP_001`, evidence `THE_LAST_PROMISE_EP_001_SC_003`, status `VERIFIED`.
 
-Another useful test:
-
+**3. Negative Abstention Test:**
 - Transcript: `A spaceship captain discovers a new planet after the engine fails.`
 - Expected result: `NO MATCH`.
 
@@ -90,9 +99,8 @@ When timestamps are absent, the app still indexes text and returns source line o
 2. **Retrieve:** Compare the promo transcript + caption to every evidence span. The baseline uses word and character TF-IDF, meaningful-token overlap, RapidFuzz token-set similarity and exact phrase detection.
 3. **Aggregate:** Keep the strongest evidence span for each episode; add a small title/alias bonus only when an ad title is provided.
 4. **Decide:** Apply code-owned thresholds and abstention rules. A score is a ranking signal, not a probability.
-5. **Verify (optional):** A configured LLM can assess only the promo and top candidate evidence. It must return structured JSON with a cited evidence ID. A model response can demote a candidate or add explanation; it cannot promote a weak match or create IDs.
-6. **Review:** A human operator approves / rejects the mapping and can select a different returned candidate.
-7. **Export:** Produce a CSV manifest and JSON audit record.
+5. **Review:** A human operator approves / rejects the mapping and can select a different returned candidate.
+6. **Export:** Produce a CSV manifest and JSON audit record.
 
 ### Decision rules in this MVP
 
@@ -114,20 +122,6 @@ pip install -r requirements-semantic.txt
 ```
 
 Then restart the app and enable **Use local semantic retrieval** on the Match a promo tab. The first run downloads `sentence-transformers/all-MiniLM-L6-v2`. If model loading fails, the app falls back to lexical matching and labels the fallback in the result reasons. The deterministic evidence rule still governs `VERIFIED`; semantic similarity alone cannot approve a mapping.
-
-### Optional LLM verifier
-
-The local deterministic matcher works without an API key. To enable a model check, set environment variables before starting Streamlit:
-
-```powershell
-$env:PROMOBRIDGE_API_KEY = "your-key"
-$env:PROMOBRIDGE_MODEL = "gpt-4o-mini"
-# Optional OpenAI-compatible endpoint:
-$env:PROMOBRIDGE_BASE_URL = "https://provider.example/v1"
-streamlit run app.py
-```
-
-In the app, select **Use configured LLM** and explicitly check the consent box before a call. The verifier is not required for the demo. Never send confidential Kuku scripts to an external provider without explicit authorisation. The adapter can be replaced without changing retrieval or decision rules.
 
 ## 7. Evaluation
 
@@ -168,7 +162,6 @@ PromoBridge/
 │   ├── ingest.py                # TXT / DOCX / PDF / JSON parser
 │   ├── catalogue.py             # Catalogue loading, editing, validation
 │   ├── scoring.py               # Retrieval score and abstention rules
-│   ├── verifier.py              # Optional OpenAI-compatible adapter
 │   └── export.py                # CSV / JSON manifest contracts
 ├── data/sample_catalogue/       # Synthetic demo scripts
 ├── evaluation/gold_set.csv      # 30 labelled synthetic test cases
@@ -204,7 +197,7 @@ Add `--semantic` after installing `requirements-semantic.txt` to use local embed
 ## 11. Privacy and responsible use
 
 - App matching is local by default; do not upload confidential scripts to public hosting.
-- Optional external model calls are disabled by default and gated by explicit consent.
+- 100% deterministic local Python pipeline; zero external LLM API calls or third-party data sharing.
 - Do not commit `.env`, Streamlit secrets, private screenplays, or raw outputs containing restricted source text.
 - Preserve input originals; only parsed and normalized derived records are used for retrieval.
 - A human remains responsible for approving campaign mappings.
