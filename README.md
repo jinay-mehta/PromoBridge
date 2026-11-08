@@ -24,7 +24,7 @@ The prototype does **not** diagnose Kuku's internal root cause, repair the consu
 - Export a campaign manifest as CSV and the full traceability run as JSON.
 - Run a 30-case synthetic gold set and export metrics / case-level results.
 - Optional local `all-MiniLM-L6-v2` semantic retrieval for paraphrases (install separately); deterministic lexical retrieval remains the default.
-- Optional provider-agnostic OpenAI-compatible LLM verifier. Off by default, requires an API key plus explicit in-app consent, and cannot promote a weak match.
+- 100% private and deterministic by default: operates locally without external LLM API keys or data-sharing requirements.
 
 ## 3. Quick start (Windows)
 
@@ -90,9 +90,8 @@ When timestamps are absent, the app still indexes text and returns source line o
 2. **Retrieve:** Compare the promo transcript + caption to every evidence span. The baseline uses word and character TF-IDF, meaningful-token overlap, RapidFuzz token-set similarity and exact phrase detection.
 3. **Aggregate:** Keep the strongest evidence span for each episode; add a small title/alias bonus only when an ad title is provided.
 4. **Decide:** Apply code-owned thresholds and abstention rules. A score is a ranking signal, not a probability.
-5. **Verify (optional):** A configured LLM can assess only the promo and top candidate evidence. It must return structured JSON with a cited evidence ID. A model response can demote a candidate or add explanation; it cannot promote a weak match or create IDs.
-6. **Review:** A human operator approves / rejects the mapping and can select a different returned candidate.
-7. **Export:** Produce a CSV manifest and JSON audit record.
+5. **Review:** A human operator approves / rejects the mapping and can select a different returned candidate.
+6. **Export:** Produce a CSV manifest and JSON audit record.
 
 ### Decision rules in this MVP
 
@@ -114,20 +113,6 @@ pip install -r requirements-semantic.txt
 ```
 
 Then restart the app and enable **Use local semantic retrieval** on the Match a promo tab. The first run downloads `sentence-transformers/all-MiniLM-L6-v2`. If model loading fails, the app falls back to lexical matching and labels the fallback in the result reasons. The deterministic evidence rule still governs `VERIFIED`; semantic similarity alone cannot approve a mapping.
-
-### Optional LLM verifier
-
-The local deterministic matcher works without an API key. To enable a model check, set environment variables before starting Streamlit:
-
-```powershell
-$env:PROMOBRIDGE_API_KEY = "your-key"
-$env:PROMOBRIDGE_MODEL = "gpt-4o-mini"
-# Optional OpenAI-compatible endpoint:
-$env:PROMOBRIDGE_BASE_URL = "https://provider.example/v1"
-streamlit run app.py
-```
-
-In the app, select **Use configured LLM** and explicitly check the consent box before a call. The verifier is not required for the demo. Never send confidential Kuku scripts to an external provider without explicit authorisation. The adapter can be replaced without changing retrieval or decision rules.
 
 ## 7. Evaluation
 
@@ -168,7 +153,6 @@ PromoBridge/
 │   ├── ingest.py                # TXT / DOCX / PDF / JSON parser
 │   ├── catalogue.py             # Catalogue loading, editing, validation
 │   ├── scoring.py               # Retrieval score and abstention rules
-│   ├── verifier.py              # Optional OpenAI-compatible adapter
 │   └── export.py                # CSV / JSON manifest contracts
 ├── data/sample_catalogue/       # Synthetic demo scripts
 ├── evaluation/gold_set.csv      # 30 labelled synthetic test cases

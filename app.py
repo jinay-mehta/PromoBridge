@@ -19,7 +19,6 @@ from src.catalogue import (apply_catalogue_edits, catalogue_dataframe, load_samp
                            parse_uploaded_files, validate_catalogue, save_catalogue_json, load_catalogue_json)
 from src.export import build_manifest_row, export_csv, export_json
 from src.scoring import score_candidates, decide_status
-from src.verifier import ModelAdapter
 from src.config import HIGH_SCORE_THRESHOLD, LOW_SCORE_THRESHOLD, MIN_TOP_TWO_MARGIN
 
 
@@ -104,7 +103,7 @@ def filter_catalogue_for_promo(promo: dict, catalogue: list[dict]) -> tuple[list
     return filtered, notes
 
 
-def run_match(promo: dict, catalogue: list[dict], use_llm: bool, consent: bool, model_name: str, use_semantic: bool = False):
+def run_match(promo: dict, catalogue: list[dict], use_semantic: bool = False):
     validation = validate_catalogue(catalogue)
     if not validation["valid"]:
         return {"promo": promo, "candidates": [], "status": "METADATA ERROR", "reasons": validation["errors"],
@@ -124,31 +123,10 @@ def run_match(promo: dict, catalogue: list[dict], use_llm: bool, consent: bool, 
     if not filtered_catalogue:
         status = "NO MATCH"
         reasons.insert(0, "No episodes passed the supplied language / territory filters. Unknown catalogue metadata is normally retained.")
-    verifier_result = {"enabled": False, "verdict": "not_checked", "reason": "Optional model verification was not used."}
-    adapter = ModelAdapter(model=model_name or None)
-    if use_llm and consent and adapter.configured and candidates and status != "NO MATCH":
-        try:
-            verifier_result = adapter.verify(promo, candidates[0])
-            # Model output can only demote or explain. It cannot create or promote a match.
-            if verifier_result.get("verdict") in {"contradicts", "insufficient"} and status == "VERIFIED":
-                status = "NEEDS REVIEW"
-                reasons.append("Optional model verifier did not confirm the top candidate; human review required.")
-            if verifier_result.get("valid") is False:
-                status = "NEEDS REVIEW" if status != "NO MATCH" else status
-                reasons.append("Optional model response was invalid; deterministic result retained for review.")
-        except Exception as exc:
-            verifier_result = {"enabled": True, "valid": False, "verdict": "insufficient", "error": str(exc),
-                               "reason": "Model call failed; deterministic retrieval retained and routed to review."}
-            if status == "VERIFIED":
-                status = "NEEDS REVIEW"
-            reasons.append("Model verification failed; no model-based approval was applied.")
-    elif use_llm and not consent:
-        verifier_result = {"enabled": False, "verdict": "not_checked", "reason": "External model not called because data-sharing consent was not selected."}
-    elif use_llm and not adapter.configured:
-        verifier_result = {"enabled": False, "verdict": "not_checked", "reason": "No PROMOBRIDGE_API_KEY / OPENAI_API_KEY found."}
     result = {
         "promo": promo, "candidates": candidates, "status": status, "reasons": reasons,
-        "verifier": verifier_result, "created_at": datetime.now(timezone.utc).isoformat(),
+        "verifier": {"enabled": False, "verdict": "not_checked", "reason": "100% deterministic local retrieval; external LLM verifier disabled."},
+        "created_at": datetime.now(timezone.utc).isoformat(),
         "catalogue_version": st.session_state.catalogue_version,
         "retrieval_method": candidates[0].get("retrieval_mode", "lexical-baseline") if candidates else "no-candidate",
     }
@@ -207,14 +185,10 @@ with tab_match:
             transcript = st.text_area("Promo dialogue transcript *", height=185, placeholder="Paste the words spoken or displayed in the promotional clip...\n\nExample: 'Stop the ceremony! This groom is already married.'")
             st.markdown("<div class='small-note'>Text-first prototype. It does not extract audio or read text from video frames.</div>", unsafe_allow_html=True)
             st.markdown("---")
-            st.markdown("**Optional AI verifier**")
             semantic_available = importlib.util.find_spec("sentence_transformers") is not None
-            use_semantic = st.checkbox("Use local semantic retrieval for paraphrases (optional model download)", value=False, disabled=not semantic_available)
+            use_semantic = st.checkbox("Use local semantic retrieval for paraphrases (optional)", value=False, disabled=not semantic_available)
             if not semantic_available:
-                st.caption("Optional local model not installed. Install requirements-semantic.txt to enable it; lexical matching works without it.")
-            use_llm = st.checkbox("Use configured LLM to verify the top candidate", value=False)
-            consent = st.checkbox("I confirm this screenplay/promo text may be sent to the configured external model provider", value=False, disabled=not use_llm)
-            model_name = st.text_input("Model name (optional override)", value=os.getenv("PROMOBRIDGE_MODEL", "gpt-4o-mini"), disabled=not use_llm)
+                st.caption("Deterministic lexical matching is active (TF-IDF + RapidFuzz token matching).")
             submitted = st.form_submit_button("Find matching show & episode", type="primary", use_container_width=True)
         if submitted:
             if promo_id.strip() and any(x.get("promo", {}).get("promo_id") == promo_id.strip() for x in st.session_state.promo_runs):
@@ -228,7 +202,7 @@ with tab_match:
                          "caption": caption.strip(), "transcript_raw": transcript.strip(),
                          "transcript_normalized": " ".join(transcript.lower().split()),
                          "input_source": "manual_text"}
-                result = run_match(promo, st.session_state.catalogue, use_llm, consent, model_name, use_semantic)
+                result = run_match(promo, st.session_state.catalogue, use_semantic=use_semantic)
                 st.session_state.promo_runs.insert(0, result)
                 st.session_state.active_result_id = promo["promo_id"]
                 write_raw_output(result)
@@ -274,10 +248,10 @@ with tab_match:
                         st.markdown(f"**#{idx} · {cand['canonical_title']} · {cand['episode_id']} · {cand['score']:.3f}**")
                         st.caption(f"{e.get('evidence_id')} | {e.get('start_time') or 'No timestamp'} | lines {e.get('source_line_start')}–{e.get('source_line_end')}")
                         st.write(e.get("text", ""))
-                with st.expander("Scoring and optional model diagnostics"):
+                with st.expander("Scoring & diagnostic breakdown"):
                     st.json({"top_candidate_component_scores": top.get("component_scores", {}),
                              "title_score": top.get("title_score"), "top_two_margin": round(top["score"] - (active["candidates"][1]["score"] if len(active["candidates"]) > 1 else 0), 4),
-                             "verifier": active.get("verifier", {})}, expanded=False)
+                             "retrieval_method": active.get("retrieval_method", "lexical-baseline")}, expanded=False)
                 st.markdown("---")
                 st.markdown("**3. Human review & handoff**")
                 decision_key = active["promo"]["promo_id"]
@@ -445,10 +419,7 @@ with tab_about:
     **3 · Apply conservative rules**  
     The rules engine assigns VERIFIED, NEEDS REVIEW, NO MATCH or METADATA ERROR. A high score alone is never enough: the text must be distinctive, directly present in evidence and separated from the runner-up.
 
-    **4 · Optional model verification**  
-    An OpenAI-compatible provider can inspect the promo and top evidence. It can demote a result or add explanation, but it cannot promote a weak match or invent catalogue facts. The call is disabled by default and requires explicit consent.
-
-    **5 · Human approval and export**  
+    **4 · Human approval and export**  
     An operator can select the correct candidate, approve or reject it, then export CSV / JSON with the source evidence and destination URL (only when supplied).
     """)
     st.markdown("---")
@@ -458,9 +429,6 @@ with tab_about:
     st.markdown("---")
     st.subheader("Run locally")
     st.code("python -m venv .venv\n# Windows: .venv\\Scripts\\activate\n# macOS/Linux: source .venv/bin/activate\npip install -r requirements.txt\nstreamlit run app.py", language="bash")
-    st.subheader("Optional model configuration")
-    st.code("# PowerShell example\n$env:PROMOBRIDGE_API_KEY='your-key'\n$env:PROMOBRIDGE_MODEL='gpt-4o-mini'\n# Optional OpenAI-compatible endpoint\n$env:PROMOBRIDGE_BASE_URL='https://your-provider/v1'", language="powershell")
-    st.caption("Keep API keys in environment variables or Streamlit secrets. Do not commit them to Git.")
     st.markdown("**Optional free local semantic retrieval**")
     st.code("pip install -r requirements-semantic.txt", language="bash")
     st.caption("The first run downloads the open-weight sentence-transformer model. Check model licence and hosting constraints before commercial deployment.")
