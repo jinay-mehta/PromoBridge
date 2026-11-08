@@ -2,7 +2,7 @@
 
 **PromoBridge maps a promotional creative to the most likely canonical show and episode, displays the screenplay evidence that supports the match, flags uncertainty, and exports a traceable handoff manifest.**
 
-> **Demo-data note:** The project currently ships with 11 synthetic screenplay episodes across three fictional shows and a 30-case synthetic evaluation set. They are not Kuku content, not based on Kuku's confidential screenplay pack, and not production performance data. Load permitted screenplays in the app to test a real catalogue locally.
+> **Screenplay Pack Note:** The prototype now ships with the actual **Kuku screenplay pack** for *"I Married a Broken Soldier. He was a Duke"* (50 episodes, 2,000+ evidence spans with scene timestamps and character dialogue beats), plus 11 synthetic benchmark episodes across three other shows. You can also upload custom screenplay files or full ZIP packs in the Catalogue tab.
 
 ## 1. What it solves
 
@@ -12,8 +12,8 @@ The prototype does **not** diagnose Kuku's internal root cause, repair the consu
 
 ## 2. Features
 
-- Load a built-in synthetic catalogue or upload one screenplay file per episode.
-- Supported input formats: TXT, Markdown, DOCX, PDF and JSON.
+- Load the built-in 61-episode catalogue (including 50 episodes of Kuku's *I Married a Broken Soldier. He was a Duke*) or upload screenplay files / ZIP packs.
+- Supported input formats: TXT, Markdown, DOCX, PDF, JSON, and ZIP packs.
 - Infer show / episode IDs from filenames such as `Show Title - E01 - Episode Title.txt`; edit canonical metadata in the Catalogue tab.
 - Parse timestamps and scene boundaries into evidence spans with stable `evidence_id` values and original line offsets.
 - Paste a promo transcript, ad caption, displayed title, platform, language and territory.
@@ -53,14 +53,19 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-### Sample demo input
+### Sample demo inputs
 
+**1. Actual Kuku Screenplay Pack:**
+- Displayed title: `I Married a Broken Soldier`
+- Transcript: `You let me believe I was walking toward my husband!`
+- Expected result: `I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_001`, status `VERIFIED`.
+
+**2. Synthetic Catalogue:**
 - Displayed title: `The Last Promise`
 - Transcript: `Stop the ceremony! This groom is already married.`
 - Expected result: `THE_LAST_PROMISE_EP_001`, evidence `THE_LAST_PROMISE_EP_001_SC_003`, status `VERIFIED`.
 
-Another useful test:
-
+**3. Negative Abstention Test:**
 - Transcript: `A spaceship captain discovers a new planet after the engine fails.`
 - Expected result: `NO MATCH`.
 

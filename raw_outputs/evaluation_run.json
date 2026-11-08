@@ -2,7 +2,7 @@
   "metrics": {
     "case_count": 30,
     "positive_count": 20,
-    "top1_accuracy_positive": 1.0,
+    "top1_accuracy_positive": 0.95,
     "top3_recall_positive": 1.0,
     "false_verified_rate_negative_and_ambiguous": 0.0,
     "caveat": "Synthetic evaluation only. Scores are not calibrated probabilities or production metrics."
@@ -16,13 +16,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8531784283286398,
+      "top_score": 0.8516474112798819,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_002",
-        "THE_LAST_PROMISE_EP_004",
-        "HEIR_TO_THE_CROWN_EP_001",
-        "THE_LAST_PROMISE_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_046",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_037",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_006"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -36,13 +36,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8702785974187186,
+      "top_score": 0.8689285188850732,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_002",
         "THE_LAST_PROMISE_EP_005",
         "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_004",
-        "BILLIONAIRE_NEXT_DOOR_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_003",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_005"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -56,13 +56,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8786136332595978,
+      "top_score": 0.8994557119237283,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_003",
         "THE_LAST_PROMISE_EP_005",
         "THE_LAST_PROMISE_EP_002",
-        "THE_LAST_PROMISE_EP_004",
-        "THE_LAST_PROMISE_EP_001"
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_004"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -76,13 +76,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8823905959355106,
+      "top_score": 0.8946031966832009,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_004",
         "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_003",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_046",
         "THE_LAST_PROMISE_EP_005",
-        "THE_LAST_PROMISE_EP_002"
+        "THE_LAST_PROMISE_EP_003"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -96,7 +96,7 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.893921393093029,
+      "top_score": 0.8992095881764635,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_005",
         "THE_LAST_PROMISE_EP_002",
@@ -116,13 +116,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8585752412685449,
+      "top_score": 0.8582049316317457,
       "candidate_episode_ids": [
         "HEIR_TO_THE_CROWN_EP_001",
         "HEIR_TO_THE_CROWN_EP_003",
-        "HEIR_TO_THE_CROWN_EP_002",
-        "THE_LAST_PROMISE_EP_003",
-        "THE_LAST_PROMISE_EP_004"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_006",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_048",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_014"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -136,13 +136,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.880997877970385,
+      "top_score": 0.886587160641588,
       "candidate_episode_ids": [
         "HEIR_TO_THE_CROWN_EP_002",
         "BILLIONAIRE_NEXT_DOOR_EP_002",
         "HEIR_TO_THE_CROWN_EP_003",
-        "HEIR_TO_THE_CROWN_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_037",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_043"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -156,13 +156,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8449606697842721,
+      "top_score": 0.8367060751823108,
       "candidate_episode_ids": [
         "HEIR_TO_THE_CROWN_EP_003",
         "THE_LAST_PROMISE_EP_001",
-        "HEIR_TO_THE_CROWN_EP_001",
-        "THE_LAST_PROMISE_EP_002",
-        "HEIR_TO_THE_CROWN_EP_002"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_018",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_009",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_003"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -176,13 +176,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8706818479133075,
+      "top_score": 0.8788274158255454,
       "candidate_episode_ids": [
         "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_002",
         "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "HEIR_TO_THE_CROWN_EP_003",
-        "HEIR_TO_THE_CROWN_EP_002"
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_033",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_009"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -196,13 +196,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8911545565364273,
+      "top_score": 0.892688509270513,
       "candidate_episode_ids": [
         "BILLIONAIRE_NEXT_DOOR_EP_002",
         "BILLIONAIRE_NEXT_DOOR_EP_001",
         "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_001",
-        "HEIR_TO_THE_CROWN_EP_002"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_009",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_048"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -216,13 +216,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8839641895152629,
+      "top_score": 0.8834959307788127,
       "candidate_episode_ids": [
         "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_001",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_010",
         "BILLIONAIRE_NEXT_DOOR_EP_002",
-        "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "THE_LAST_PROMISE_EP_004"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_031",
+        "THE_LAST_PROMISE_EP_001"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -236,13 +236,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8585014326903376,
+      "top_score": 0.8547190798719413,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_002",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_032",
         "THE_LAST_PROMISE_EP_003",
-        "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_004",
-        "THE_LAST_PROMISE_EP_005"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_025",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_031"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -256,13 +256,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8738076199995375,
+      "top_score": 0.8836756060403488,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_003",
         "THE_LAST_PROMISE_EP_005",
         "THE_LAST_PROMISE_EP_001",
-        "HEIR_TO_THE_CROWN_EP_003",
-        "THE_LAST_PROMISE_EP_004"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_043",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_028"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -276,13 +276,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.8806651765157572,
+      "top_score": 0.8774610168391989,
       "candidate_episode_ids": [
         "HEIR_TO_THE_CROWN_EP_002",
         "HEIR_TO_THE_CROWN_EP_003",
-        "HEIR_TO_THE_CROWN_EP_001",
-        "THE_LAST_PROMISE_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_002"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_037",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_031",
+        "HEIR_TO_THE_CROWN_EP_001"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -296,13 +296,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "VERIFIED",
-      "top_score": 0.880721210402168,
+      "top_score": 0.8852813060006453,
       "candidate_episode_ids": [
         "BILLIONAIRE_NEXT_DOOR_EP_002",
         "BILLIONAIRE_NEXT_DOOR_EP_001",
         "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_004",
-        "HEIR_TO_THE_CROWN_EP_002"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_031",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_030"
       ],
       "reasons": [
         "Distinctive promo text is present in the cited screenplay evidence."
@@ -312,17 +312,17 @@
       "promo_id": "G016",
       "case_type": "positive",
       "expected_episode_id": "THE_LAST_PROMISE_EP_001",
-      "top1_episode_id": "THE_LAST_PROMISE_EP_001",
-      "top1_correct": true,
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_002",
+      "top1_correct": false,
       "top3_correct": true,
       "status": "NO MATCH",
-      "top_score": 0.3192111676480909,
+      "top_score": 0.33642706145143875,
       "candidate_episode_ids": [
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_002",
         "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_002",
-        "THE_LAST_PROMISE_EP_005",
-        "HEIR_TO_THE_CROWN_EP_001",
-        "THE_LAST_PROMISE_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_001",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_046",
+        "THE_LAST_PROMISE_EP_002"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -336,13 +336,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "NO MATCH",
-      "top_score": 0.3290770971236642,
+      "top_score": 0.33583933195083393,
       "candidate_episode_ids": [
         "THE_LAST_PROMISE_EP_002",
         "THE_LAST_PROMISE_EP_003",
-        "THE_LAST_PROMISE_EP_004",
-        "THE_LAST_PROMISE_EP_005",
-        "THE_LAST_PROMISE_EP_001"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_030",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_009",
+        "THE_LAST_PROMISE_EP_004"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -356,13 +356,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "NO MATCH",
-      "top_score": 0.2592867089362837,
+      "top_score": 0.2635594146101217,
       "candidate_episode_ids": [
         "HEIR_TO_THE_CROWN_EP_001",
         "HEIR_TO_THE_CROWN_EP_002",
         "HEIR_TO_THE_CROWN_EP_003",
         "BILLIONAIRE_NEXT_DOOR_EP_002",
-        "BILLIONAIRE_NEXT_DOOR_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_037"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -376,13 +376,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "NO MATCH",
-      "top_score": 0.294582141305323,
+      "top_score": 0.2853266179124626,
       "candidate_episode_ids": [
         "HEIR_TO_THE_CROWN_EP_003",
         "HEIR_TO_THE_CROWN_EP_002",
         "HEIR_TO_THE_CROWN_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_002",
-        "BILLIONAIRE_NEXT_DOOR_EP_001"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_025",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_027"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -396,13 +396,13 @@
       "top1_correct": true,
       "top3_correct": true,
       "status": "NO MATCH",
-      "top_score": 0.32709437221020643,
+      "top_score": 0.3341218910125978,
       "candidate_episode_ids": [
         "BILLIONAIRE_NEXT_DOOR_EP_002",
-        "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_005"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_047",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_036",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_001",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_019"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -412,17 +412,17 @@
       "promo_id": "G021",
       "case_type": "ambiguous",
       "expected_episode_id": "",
-      "top1_episode_id": "THE_LAST_PROMISE_EP_001",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_034",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NEEDS REVIEW",
-      "top_score": 0.2929284930270208,
+      "top_score": 0.4094038692365923,
       "candidate_episode_ids": [
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_034",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_033",
         "THE_LAST_PROMISE_EP_001",
         "THE_LAST_PROMISE_EP_004",
-        "THE_LAST_PROMISE_EP_005",
-        "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_002"
+        "THE_LAST_PROMISE_EP_005"
       ],
       "reasons": [
         "Very little distinctive text was supplied; add more dialogue or a caption."
@@ -432,17 +432,17 @@
       "promo_id": "G022",
       "case_type": "ambiguous",
       "expected_episode_id": "",
-      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_001",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_025",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.17804382917584632,
+      "top_score": 0.30077621170885627,
       "candidate_episode_ids": [
-        "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_001",
-        "HEIR_TO_THE_CROWN_EP_003",
-        "THE_LAST_PROMISE_EP_005"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_025",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_040",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_033",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_019",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_008"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -456,13 +456,13 @@
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.22856293686147677,
+      "top_score": 0.22099840618367916,
       "candidate_episode_ids": [
         "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_003",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_027",
         "BILLIONAIRE_NEXT_DOOR_EP_002",
-        "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "THE_LAST_PROMISE_EP_005",
-        "HEIR_TO_THE_CROWN_EP_002"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_038"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -472,17 +472,17 @@
       "promo_id": "G024",
       "case_type": "ambiguous",
       "expected_episode_id": "",
-      "top1_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_030",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.10396081119233945,
+      "top_score": 0.21314268061452996,
       "candidate_episode_ids": [
-        "THE_LAST_PROMISE_EP_002",
-        "THE_LAST_PROMISE_EP_003",
-        "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_005",
-        "HEIR_TO_THE_CROWN_EP_001"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_030",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_025",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_009",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_023"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -492,17 +492,17 @@
       "promo_id": "G025",
       "case_type": "ambiguous",
       "expected_episode_id": "",
-      "top1_episode_id": "THE_LAST_PROMISE_EP_003",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_004",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.1506341374526996,
+      "top_score": 0.14638069631658346,
       "candidate_episode_ids": [
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_004",
         "THE_LAST_PROMISE_EP_003",
-        "THE_LAST_PROMISE_EP_001",
-        "THE_LAST_PROMISE_EP_004",
-        "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "BILLIONAIRE_NEXT_DOOR_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_019",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_030",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_032"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -512,17 +512,17 @@
       "promo_id": "G026",
       "case_type": "negative",
       "expected_episode_id": "",
-      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_006",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.09112888634678973,
+      "top_score": 0.1323954585071134,
       "candidate_episode_ids": [
-        "HEIR_TO_THE_CROWN_EP_001",
-        "HEIR_TO_THE_CROWN_EP_003",
-        "HEIR_TO_THE_CROWN_EP_002",
-        "THE_LAST_PROMISE_EP_002",
-        "BILLIONAIRE_NEXT_DOOR_EP_001"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_006",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_043",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_027",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_023"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -532,17 +532,17 @@
       "promo_id": "G027",
       "case_type": "negative",
       "expected_episode_id": "",
-      "top1_episode_id": "THE_LAST_PROMISE_EP_004",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.06616686320931175,
+      "top_score": 0.17609964606629552,
       "candidate_episode_ids": [
-        "THE_LAST_PROMISE_EP_004",
-        "BILLIONAIRE_NEXT_DOOR_EP_001",
-        "THE_LAST_PROMISE_EP_005",
-        "HEIR_TO_THE_CROWN_EP_002",
-        "HEIR_TO_THE_CROWN_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_048",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_016",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_036",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_045"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -552,17 +552,17 @@
       "promo_id": "G028",
       "case_type": "negative",
       "expected_episode_id": "",
-      "top1_episode_id": "THE_LAST_PROMISE_EP_004",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_002",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.09591915794956693,
+      "top_score": 0.11612794238748758,
       "candidate_episode_ids": [
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_002",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020",
         "THE_LAST_PROMISE_EP_004",
-        "HEIR_TO_THE_CROWN_EP_002",
-        "THE_LAST_PROMISE_EP_001",
-        "HEIR_TO_THE_CROWN_EP_003",
-        "THE_LAST_PROMISE_EP_003"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_042",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_025"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -572,17 +572,17 @@
       "promo_id": "G029",
       "case_type": "negative",
       "expected_episode_id": "",
-      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_042",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.0871426001503347,
+      "top_score": 0.10476280955381706,
       "candidate_episode_ids": [
-        "BILLIONAIRE_NEXT_DOOR_EP_002",
-        "HEIR_TO_THE_CROWN_EP_001",
-        "THE_LAST_PROMISE_EP_003",
-        "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_004"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_042",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_031",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_035",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_001",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_020"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."
@@ -592,17 +592,17 @@
       "promo_id": "G030",
       "case_type": "negative",
       "expected_episode_id": "",
-      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "top1_episode_id": "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_018",
       "top1_correct": false,
       "top3_correct": false,
       "status": "NO MATCH",
-      "top_score": 0.06190393531074011,
+      "top_score": 0.11550220246307968,
       "candidate_episode_ids": [
-        "HEIR_TO_THE_CROWN_EP_002",
-        "THE_LAST_PROMISE_EP_003",
-        "HEIR_TO_THE_CROWN_EP_003",
-        "BILLIONAIRE_NEXT_DOOR_EP_003",
-        "THE_LAST_PROMISE_EP_001"
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_018",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_011",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_016",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_050",
+        "I_MARRIED_A_BROKEN_SOLDIER_HE_WAS_A_DUKE_EP_006"
       ],
       "reasons": [
         "Best candidate is below the minimum retrieval threshold (0.60)."

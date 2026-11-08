@@ -159,7 +159,7 @@ with st.sidebar:
     st.caption(f"< {LOW_SCORE_THRESHOLD:.2f} → NO MATCH")
     st.caption("Scores are ranking signals, not probabilities.")
     st.markdown("---")
-    st.caption("Prototype · Local-first · Synthetic demo content")
+    st.caption("PromoBridge · Local & deterministic · Kuku screenplay pack integrated")
 
 st.markdown('<div class="kicker">CONTENT OPERATIONS WORKSPACE</div>', unsafe_allow_html=True)
 st.markdown("# Every promo. The right story.")
@@ -177,12 +177,12 @@ with tab_match:
             c1, c2 = st.columns(2)
             promo_id = c1.text_input("Promo ID", value=f"PROMO-{uuid.uuid4().hex[:6].upper()}")
             platform = c2.selectbox("Platform", ["Instagram", "Facebook", "TikTok", "YouTube", "Other"])
-            displayed_title = st.text_input("Title shown in ad (optional)", placeholder="e.g. The Last Promise")
+            displayed_title = st.text_input("Title shown in ad (optional)", placeholder="e.g. I Married a Broken Soldier or The Last Promise")
             c3, c4 = st.columns(2)
             language = c3.selectbox("Promo language", ["Unknown", "English", "Hindi", "Tamil", "Telugu", "Kannada"])
             territory = c4.selectbox("Target territory", ["Unknown", "US", "India", "Singapore", "Global"])
             caption = st.text_area("Ad caption / description (optional)", height=78, placeholder="Paste the social caption or ad copy...")
-            transcript = st.text_area("Promo dialogue transcript *", height=185, placeholder="Paste the words spoken or displayed in the promotional clip...\n\nExample: 'Stop the ceremony! This groom is already married.'")
+            transcript = st.text_area("Promo dialogue transcript *", height=185, placeholder="Paste the words spoken or displayed in the promotional clip...\n\nExamples:\n• 'You let me believe I was walking toward my husband!' (I Married a Broken Soldier)\n• 'Stop the ceremony! This groom is already married.' (The Last Promise)")
             st.markdown("<div class='small-note'>Text-first prototype. It does not extract audio or read text from video frames.</div>", unsafe_allow_html=True)
             st.markdown("---")
             semantic_available = importlib.util.find_spec("sentence_transformers") is not None
@@ -282,7 +282,7 @@ with tab_match:
 
 with tab_catalogue:
     st.subheader("Screenplay catalogue")
-    st.markdown("Upload one file per episode. Supported: TXT, DOCX, PDF and JSON. Filename convention recommended: `Show Title - E01 - Episode Title.txt`.")
+    st.markdown("Upload individual screenplay files or full screenplay pack ZIPs. Supported: TXT, DOCX, PDF, JSON and ZIP.")
     saved_catalogue_file = st.file_uploader("Or restore a previously exported PromoBridge catalogue JSON", type=["json"], accept_multiple_files=False, key="catalogue_json_restore")
     if saved_catalogue_file and st.button("Restore saved catalogue", key="restore_catalogue_button"):
         try:
@@ -292,7 +292,7 @@ with tab_catalogue:
             st.rerun()
         except Exception as exc:
             st.error(f"Could not restore catalogue: {exc}")
-    uploaded = st.file_uploader("Add screenplay files (one episode per file)", type=["txt", "md", "docx", "pdf", "json"], accept_multiple_files=True, key="screenplay_upload")
+    uploaded = st.file_uploader("Add screenplay files or pack ZIP (e.g. TXT, DOCX, PDF, JSON, ZIP)", type=["txt", "md", "docx", "pdf", "json", "zip"], accept_multiple_files=True, key="screenplay_upload")
     col_a, col_b = st.columns([1, 1])
     with col_a:
         replace_catalogue = st.checkbox("Replace current catalogue (otherwise append)", value=False)

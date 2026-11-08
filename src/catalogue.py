@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import json
+import zipfile
 from pathlib import Path
 from urllib.parse import urlparse
 from typing import Any
@@ -10,7 +12,7 @@ import pandas as pd
 
 from .ingest import EpisodeRecord, parse_episode_file
 
-SUPPORTED_EXTENSIONS = {".txt", ".md", ".docx", ".pdf", ".json"}
+SUPPORTED_EXTENSIONS = {".txt", ".md", ".docx", ".pdf", ".json", ".zip"}
 
 
 def parse_uploaded_files(uploaded_files: list[Any], overrides: dict[str, dict[str, Any]] | None = None) -> list[dict[str, Any]]:
@@ -19,7 +21,21 @@ def parse_uploaded_files(uploaded_files: list[Any], overrides: dict[str, dict[st
     for file in uploaded_files:
         name = getattr(file, "name", None) or file.get("name")
         payload = file.getvalue() if hasattr(file, "getvalue") else file.get("bytes", b"")
-        if Path(name).suffix.lower() not in SUPPORTED_EXTENSIONS:
+        suffix = Path(name).suffix.lower()
+        if suffix == ".zip":
+            try:
+                with zipfile.ZipFile(io.BytesIO(payload)) as z:
+                    for zname in sorted(z.namelist()):
+                        z_suffix = Path(zname).suffix.lower()
+                        if z_suffix in {".txt", ".md", ".docx", ".pdf", ".json"} and not zname.startswith("__MACOSX"):
+                            zdata = z.read(zname)
+                            if zdata.strip():
+                                rec = parse_episode_file(zname, zdata, overrides.get(zname))
+                                records.append(rec.to_dict())
+            except Exception:
+                continue
+            continue
+        if suffix not in SUPPORTED_EXTENSIONS:
             continue
         record = parse_episode_file(name, payload, overrides.get(name))
         records.append(record.to_dict())
@@ -27,10 +43,21 @@ def parse_uploaded_files(uploaded_files: list[Any], overrides: dict[str, dict[st
 
 
 def load_sample_catalogue(root: Path | None = None) -> list[dict[str, Any]]:
-    root = root or Path(__file__).resolve().parents[1] / "data" / "sample_catalogue"
+    base = root or Path(__file__).resolve().parents[1] / "data"
+    sample_dir = base if base.name == "sample_catalogue" else base / "sample_catalogue"
+    kuku_dir = base / "kuku_screenplay_pack"
     records: list[dict[str, Any]] = []
-    for path in sorted(root.glob("*.txt")):
-        records.append(parse_episode_file(path.name, path.read_bytes()).to_dict())
+
+    # 1. Load the actual Kuku screenplay pack if present
+    if kuku_dir.exists():
+        for path in sorted(kuku_dir.rglob("*.txt")):
+            records.append(parse_episode_file(str(path), path.read_bytes()).to_dict())
+
+    # 2. Load the demo catalogue
+    if sample_dir.exists():
+        for path in sorted(sample_dir.glob("*.txt")):
+            records.append(parse_episode_file(path.name, path.read_bytes()).to_dict())
+
     return records
 
 
