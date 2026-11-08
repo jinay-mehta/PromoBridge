@@ -1,0 +1,191 @@
+{
+  "promo": {
+    "promo_id": "CLI_PROMO",
+    "transcript_raw": "A spaceship captain discovers a new planet after the engine fails.",
+    "caption": "",
+    "displayed_title": "",
+    "platform": "CLI",
+    "language": "Unknown",
+    "territory": "Unknown"
+  },
+  "status": "NO MATCH",
+  "reasons": [
+    "Best candidate is below the minimum retrieval threshold (0.60)."
+  ],
+  "candidates": [
+    {
+      "show_id": "HEIR_TO_THE_CROWN",
+      "canonical_title": "Heir to the Crown",
+      "episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "episode_number": 1,
+      "episode_title": "The Missing Heir",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.09112888634678973,
+      "content_score": 0.09112888634678973,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.020594209471843594,
+        "char_tfidf": 0.09088807261933377,
+        "token_overlap": 0.14285714285714285,
+        "fuzzy": 0.42857142857142855,
+        "exact_phrase": 0.0,
+        "content_score": 0.09112888634678973
+      },
+      "evidence": {
+        "evidence_id": "HEIR_TO_THE_CROWN_EP_001_SC_002",
+        "episode_id": "HEIR_TO_THE_CROWN_EP_001",
+        "scene_index": 2,
+        "start_time": "00:00:43",
+        "end_time": "00:01:17",
+        "speaker": "NOAH",
+        "text": "NOAH: I am not your prince. I repair motorcycles for a living. CAPTAIN RAY: Then explain why the king's signet ring fits your hand. NOAH: I have never seen that ring before.",
+        "source_line_start": 9,
+        "source_line_end": 12
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "HEIR_TO_THE_CROWN",
+      "canonical_title": "Heir to the Crown",
+      "episode_id": "HEIR_TO_THE_CROWN_EP_003",
+      "episode_number": 3,
+      "episode_title": "The Secret Ring",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.08862207141364337,
+      "content_score": 0.08862207141364337,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.025214695245393555,
+        "char_tfidf": 0.06438075738594606,
+        "token_overlap": 0.14285714285714285,
+        "fuzzy": 0.43137254901960786,
+        "exact_phrase": 0.0,
+        "content_score": 0.08862207141364337
+      },
+      "evidence": {
+        "evidence_id": "HEIR_TO_THE_CROWN_EP_003_SC_002",
+        "episode_id": "HEIR_TO_THE_CROWN_EP_003",
+        "scene_index": 2,
+        "start_time": "00:00:45",
+        "end_time": "00:01:20",
+        "speaker": "CAPTAIN RAY",
+        "text": "CAPTAIN RAY: The fire report was signed by the royal physician. NOAH: Then why is the physician's name crossed out? QUEEN ELENA: Because he is now the king's personal doctor.",
+        "source_line_start": 9,
+        "source_line_end": 12
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "HEIR_TO_THE_CROWN",
+      "canonical_title": "Heir to the Crown",
+      "episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "episode_number": 2,
+      "episode_title": "The Royal Test",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.083265076110186,
+      "content_score": 0.083265076110186,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.02078507043448028,
+        "char_tfidf": 0.05731655843518156,
+        "token_overlap": 0.14285714285714285,
+        "fuzzy": 0.39655172413793105,
+        "exact_phrase": 0.0,
+        "content_score": 0.083265076110186
+      },
+      "evidence": {
+        "evidence_id": "HEIR_TO_THE_CROWN_EP_002_SC_002",
+        "episode_id": "HEIR_TO_THE_CROWN_EP_002",
+        "scene_index": 2,
+        "start_time": "00:00:39",
+        "end_time": "00:01:13",
+        "speaker": "CAPTAIN RAY",
+        "text": "CAPTAIN RAY: The test is simple. Touch the old throne and the hidden crest will appear. NOAH: And if nothing happens? QUEEN ELENA: Then you walk out as an ordinary man, and I lose my last hope.",
+        "source_line_start": 9,
+        "source_line_end": 12
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_002",
+      "episode_number": 2,
+      "episode_title": "The Hidden Letter",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.05244638660697444,
+      "content_score": 0.05244638660697444,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.032081703659678176,
+        "char_tfidf": 0.077406520198775,
+        "token_overlap": 0.0,
+        "fuzzy": 0.35193133047210295,
+        "exact_phrase": 0.0,
+        "content_score": 0.05244638660697444
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_002_SC_001",
+        "episode_id": "THE_LAST_PROMISE_EP_002",
+        "scene_index": 1,
+        "start_time": "00:00:04",
+        "end_time": "00:00:42",
+        "speaker": "MAYA",
+        "text": "MAYA: This letter has my father's handwriting, but it is dated after his funeral. ARJUN: Read the last line before you decide I lied to you. MAYA: If Arjun returns, give him the key to room seventeen.",
+        "source_line_start": 4,
+        "source_line_end": 7
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "BILLIONAIRE_NEXT_DOOR",
+      "canonical_title": "Billionaire Next Door",
+      "episode_id": "BILLIONAIRE_NEXT_DOOR_EP_001",
+      "episode_number": 1,
+      "episode_title": "The Wrong Apartment",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.04822237020982731,
+      "content_score": 0.04822237020982731,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.007164054029284415,
+        "char_tfidf": 0.04599058722134256,
+        "token_overlap": 0.0,
+        "fuzzy": 0.4035087719298246,
+        "exact_phrase": 0.0,
+        "content_score": 0.04822237020982731
+      },
+      "evidence": {
+        "evidence_id": "BILLIONAIRE_NEXT_DOOR_EP_001_SC_001",
+        "episode_id": "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "scene_index": 1,
+        "start_time": "00:00:03",
+        "end_time": "00:00:41",
+        "speaker": "TARA",
+        "text": "TARA: You said this was apartment 1204. Why does the owner have a helicopter? ADRIAN: Because you walked into the penthouse, not the rental office. TARA: Are you the billionaire from the magazine cover?",
+        "source_line_start": 4,
+        "source_line_end": 7
+      },
+      "retrieval_mode": "lexical-baseline"
+    }
+  ],
+  "catalogue_validation": {
+    "episodes": 11,
+    "shows": 3
+  }
+}

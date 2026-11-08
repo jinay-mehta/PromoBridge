@@ -1,0 +1,191 @@
+{
+  "promo": {
+    "promo_id": "CLI_PROMO",
+    "transcript_raw": "Stop the ceremony! This groom is already married.",
+    "caption": "",
+    "displayed_title": "The Last Promise",
+    "platform": "CLI",
+    "language": "Unknown",
+    "territory": "Unknown"
+  },
+  "status": "VERIFIED",
+  "reasons": [
+    "Distinctive promo text is present in the cited screenplay evidence."
+  ],
+  "candidates": [
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_001",
+      "episode_number": 1,
+      "episode_title": "The Wedding Deal",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.8531784283286398,
+      "content_score": 0.8368649203651553,
+      "title_score": 1.0,
+      "component_scores": {
+        "word_tfidf": 0.4866417971451221,
+        "char_tfidf": 0.5681182924009347,
+        "token_overlap": 1.0,
+        "fuzzy": 1.0,
+        "exact_phrase": 1.0,
+        "content_score": 0.8368649203651553
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_001_SC_003",
+        "episode_id": "THE_LAST_PROMISE_EP_001",
+        "scene_index": 3,
+        "start_time": "00:01:11",
+        "end_time": null,
+        "speaker": "VIKRAM",
+        "text": "VIKRAM: Stop the ceremony! This groom is already married. ARJUN: Vikram, one more word and everyone will learn what you did. MAYA: Wait. Who is his first wife?",
+        "source_line_start": 14,
+        "source_line_end": 16
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_002",
+      "episode_number": 2,
+      "episode_title": "The Hidden Letter",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.14822189594511398,
+      "content_score": 0.05357988438345999,
+      "title_score": 1.0,
+      "component_scores": {
+        "word_tfidf": 0.022962343973829936,
+        "char_tfidf": 0.07897415075668128,
+        "token_overlap": 0.0,
+        "fuzzy": 0.3793103448275862,
+        "exact_phrase": 0.0,
+        "content_score": 0.05357988438345999
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_002_SC_001",
+        "episode_id": "THE_LAST_PROMISE_EP_002",
+        "scene_index": 1,
+        "start_time": "00:00:04",
+        "end_time": "00:00:42",
+        "speaker": "MAYA",
+        "text": "MAYA: This letter has my father's handwriting, but it is dated after his funeral. ARJUN: Read the last line before you decide I lied to you. MAYA: If Arjun returns, give him the key to room seventeen.",
+        "source_line_start": 4,
+        "source_line_end": 7
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_004",
+      "episode_number": 4,
+      "episode_title": "The Final Signature",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.144099640768755,
+      "content_score": 0.04899960085417222,
+      "title_score": 1.0,
+      "component_scores": {
+        "word_tfidf": 0.021803397498900354,
+        "char_tfidf": 0.07159669099291098,
+        "token_overlap": 0.0,
+        "fuzzy": 0.34615384615384615,
+        "exact_phrase": 0.0,
+        "content_score": 0.04899960085417222
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_004_SC_001",
+        "episode_id": "THE_LAST_PROMISE_EP_004",
+        "scene_index": 1,
+        "start_time": "00:00:06",
+        "end_time": "00:00:47",
+        "speaker": "JUDGE",
+        "text": "JUDGE: This court recognises the original marriage agreement, not the forged copy. MAYA: Then the house belongs to my family again. ARJUN: Unless you read the clause on the final page.",
+        "source_line_start": 4,
+        "source_line_end": 7
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "HEIR_TO_THE_CROWN",
+      "canonical_title": "Heir to the Crown",
+      "episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "episode_number": 1,
+      "episode_title": "The Missing Heir",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.1439564718489006,
+      "content_score": 0.10439607983211177,
+      "title_score": 0.5,
+      "component_scores": {
+        "word_tfidf": 0.038298153031374835,
+        "char_tfidf": 0.10575296245055849,
+        "token_overlap": 0.2,
+        "fuzzy": 0.3793103448275862,
+        "exact_phrase": 0.0,
+        "content_score": 0.10439607983211177
+      },
+      "evidence": {
+        "evidence_id": "HEIR_TO_THE_CROWN_EP_001_SC_003",
+        "episode_id": "HEIR_TO_THE_CROWN_EP_001",
+        "scene_index": 3,
+        "start_time": "00:01:17",
+        "end_time": null,
+        "speaker": "QUEEN ELENA",
+        "text": "QUEEN ELENA: Your father left one instruction: never trust the man wearing the silver crown. NOAH: But you are wearing it. QUEEN ELENA: Exactly. Someone has already replaced me.",
+        "source_line_start": 14,
+        "source_line_end": 16
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_003",
+      "episode_number": 3,
+      "episode_title": "The Hospital Truth",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.1430120175210135,
+      "content_score": 0.0477911305789039,
+      "title_score": 1.0,
+      "component_scores": {
+        "word_tfidf": 0.026792332850989614,
+        "char_tfidf": 0.03215449661390966,
+        "token_overlap": 0.0,
+        "fuzzy": 0.3793103448275862,
+        "exact_phrase": 0.0,
+        "content_score": 0.0477911305789039
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_003_SC_003",
+        "episode_id": "THE_LAST_PROMISE_EP_003",
+        "scene_index": 3,
+        "start_time": "00:01:19",
+        "end_time": null,
+        "speaker": "MAYA",
+        "text": "MAYA: The second report has a different signature. Vikram, explain this. VIKRAM: You were never supposed to see that page. DOCTOR: Security, lock the doors. The real report is missing.",
+        "source_line_start": 14,
+        "source_line_end": 16
+      },
+      "retrieval_mode": "lexical-baseline"
+    }
+  ],
+  "catalogue_validation": {
+    "episodes": 11,
+    "shows": 3
+  }
+}

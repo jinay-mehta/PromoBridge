@@ -1,0 +1,1 @@
+"""PromoBridge core package."""

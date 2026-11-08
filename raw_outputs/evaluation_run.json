@@ -1,0 +1,612 @@
+{
+  "metrics": {
+    "case_count": 30,
+    "positive_count": 20,
+    "top1_accuracy_positive": 1.0,
+    "top3_recall_positive": 1.0,
+    "false_verified_rate_negative_and_ambiguous": 0.0,
+    "caveat": "Synthetic evaluation only. Scores are not calibrated probabilities or production metrics."
+  },
+  "outcomes": [
+    {
+      "promo_id": "G001",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_001",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_001",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8531784283286398,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_004",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "THE_LAST_PROMISE_EP_003"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G002",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8702785974187186,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_005",
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_004",
+        "BILLIONAIRE_NEXT_DOOR_EP_003"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G003",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_003",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_003",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8786136332595978,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_005",
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_004",
+        "THE_LAST_PROMISE_EP_001"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G004",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_004",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_004",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8823905959355106,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_004",
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_005",
+        "THE_LAST_PROMISE_EP_002"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G005",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_005",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_005",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.893921393093029,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_005",
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_004"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G006",
+      "case_type": "positive",
+      "expected_episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8585752412685449,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_001",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "HEIR_TO_THE_CROWN_EP_002",
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_004"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G007",
+      "case_type": "positive",
+      "expected_episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.880997877970385,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_003"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G008",
+      "case_type": "positive",
+      "expected_episode_id": "HEIR_TO_THE_CROWN_EP_003",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_003",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8449606697842721,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "THE_LAST_PROMISE_EP_002",
+        "HEIR_TO_THE_CROWN_EP_002"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G009",
+      "case_type": "positive",
+      "expected_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_001",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_001",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8706818479133075,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "HEIR_TO_THE_CROWN_EP_002"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G010",
+      "case_type": "positive",
+      "expected_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8911545565364273,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "HEIR_TO_THE_CROWN_EP_002"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G011",
+      "case_type": "positive",
+      "expected_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_003",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_003",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8839641895152629,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "THE_LAST_PROMISE_EP_004"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G012",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8585014326903376,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_004",
+        "THE_LAST_PROMISE_EP_005"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G013",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_003",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_003",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8738076199995375,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_005",
+        "THE_LAST_PROMISE_EP_001",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "THE_LAST_PROMISE_EP_004"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G014",
+      "case_type": "positive",
+      "expected_episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.8806651765157572,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_002",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "THE_LAST_PROMISE_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_002"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G015",
+      "case_type": "positive",
+      "expected_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "VERIFIED",
+      "top_score": 0.880721210402168,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_004",
+        "HEIR_TO_THE_CROWN_EP_002"
+      ],
+      "reasons": [
+        "Distinctive promo text is present in the cited screenplay evidence."
+      ]
+    },
+    {
+      "promo_id": "G016",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_001",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_001",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "NO MATCH",
+      "top_score": 0.3192111676480909,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_005",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "THE_LAST_PROMISE_EP_003"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G017",
+      "case_type": "positive",
+      "expected_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "NO MATCH",
+      "top_score": 0.3290770971236642,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_004",
+        "THE_LAST_PROMISE_EP_005",
+        "THE_LAST_PROMISE_EP_001"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G018",
+      "case_type": "positive",
+      "expected_episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "NO MATCH",
+      "top_score": 0.2592867089362837,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_001",
+        "HEIR_TO_THE_CROWN_EP_002",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_003"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G019",
+      "case_type": "positive",
+      "expected_episode_id": "HEIR_TO_THE_CROWN_EP_003",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_003",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "NO MATCH",
+      "top_score": 0.294582141305323,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_003",
+        "HEIR_TO_THE_CROWN_EP_002",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G020",
+      "case_type": "positive",
+      "expected_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_correct": true,
+      "top3_correct": true,
+      "status": "NO MATCH",
+      "top_score": 0.32709437221020643,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_005"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G021",
+      "case_type": "ambiguous",
+      "expected_episode_id": "",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_001",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NEEDS REVIEW",
+      "top_score": 0.2929284930270208,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_004",
+        "THE_LAST_PROMISE_EP_005",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_002"
+      ],
+      "reasons": [
+        "Very little distinctive text was supplied; add more dialogue or a caption."
+      ]
+    },
+    {
+      "promo_id": "G022",
+      "case_type": "ambiguous",
+      "expected_episode_id": "",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_001",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.17804382917584632,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "THE_LAST_PROMISE_EP_005"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G023",
+      "case_type": "ambiguous",
+      "expected_episode_id": "",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_003",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.22856293686147677,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "THE_LAST_PROMISE_EP_005",
+        "HEIR_TO_THE_CROWN_EP_002"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G024",
+      "case_type": "ambiguous",
+      "expected_episode_id": "",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_002",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.10396081119233945,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_002",
+        "THE_LAST_PROMISE_EP_003",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_005",
+        "HEIR_TO_THE_CROWN_EP_001"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G025",
+      "case_type": "ambiguous",
+      "expected_episode_id": "",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_003",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.1506341374526996,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_003",
+        "THE_LAST_PROMISE_EP_001",
+        "THE_LAST_PROMISE_EP_004",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "BILLIONAIRE_NEXT_DOOR_EP_003"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G026",
+      "case_type": "negative",
+      "expected_episode_id": "",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_001",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.09112888634678973,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_001",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "HEIR_TO_THE_CROWN_EP_002",
+        "THE_LAST_PROMISE_EP_002",
+        "BILLIONAIRE_NEXT_DOOR_EP_001"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G027",
+      "case_type": "negative",
+      "expected_episode_id": "",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_004",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.06616686320931175,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_004",
+        "BILLIONAIRE_NEXT_DOOR_EP_001",
+        "THE_LAST_PROMISE_EP_005",
+        "HEIR_TO_THE_CROWN_EP_002",
+        "HEIR_TO_THE_CROWN_EP_003"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G028",
+      "case_type": "negative",
+      "expected_episode_id": "",
+      "top1_episode_id": "THE_LAST_PROMISE_EP_004",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.09591915794956693,
+      "candidate_episode_ids": [
+        "THE_LAST_PROMISE_EP_004",
+        "HEIR_TO_THE_CROWN_EP_002",
+        "THE_LAST_PROMISE_EP_001",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "THE_LAST_PROMISE_EP_003"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G029",
+      "case_type": "negative",
+      "expected_episode_id": "",
+      "top1_episode_id": "BILLIONAIRE_NEXT_DOOR_EP_002",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.0871426001503347,
+      "candidate_episode_ids": [
+        "BILLIONAIRE_NEXT_DOOR_EP_002",
+        "HEIR_TO_THE_CROWN_EP_001",
+        "THE_LAST_PROMISE_EP_003",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_004"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    },
+    {
+      "promo_id": "G030",
+      "case_type": "negative",
+      "expected_episode_id": "",
+      "top1_episode_id": "HEIR_TO_THE_CROWN_EP_002",
+      "top1_correct": false,
+      "top3_correct": false,
+      "status": "NO MATCH",
+      "top_score": 0.06190393531074011,
+      "candidate_episode_ids": [
+        "HEIR_TO_THE_CROWN_EP_002",
+        "THE_LAST_PROMISE_EP_003",
+        "HEIR_TO_THE_CROWN_EP_003",
+        "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "THE_LAST_PROMISE_EP_001"
+      ],
+      "reasons": [
+        "Best candidate is below the minimum retrieval threshold (0.60)."
+      ]
+    }
+  ]
+}

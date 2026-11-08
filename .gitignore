@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.streamlit/secrets.toml
+raw_outputs/*
+!raw_outputs/README.md
+!raw_outputs/demo_*.json
+!raw_outputs/evaluation_run.json
+*.sqlite3
+.DS_Store

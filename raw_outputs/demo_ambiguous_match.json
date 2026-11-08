@@ -1,0 +1,191 @@
+{
+  "promo": {
+    "promo_id": "CLI_PROMO",
+    "transcript_raw": "Tell me the truth before this is over.",
+    "caption": "",
+    "displayed_title": "",
+    "platform": "CLI",
+    "language": "Unknown",
+    "territory": "Unknown"
+  },
+  "status": "NEEDS REVIEW",
+  "reasons": [
+    "Very little distinctive text was supplied; add more dialogue or a caption."
+  ],
+  "candidates": [
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_001",
+      "episode_number": 1,
+      "episode_title": "The Wedding Deal",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.2143649922522453,
+      "content_score": 0.2143649922522453,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.11028564435372788,
+        "char_tfidf": 0.17582539777994297,
+        "token_overlap": 0.5,
+        "fuzzy": 0.576923076923077,
+        "exact_phrase": 0.0,
+        "content_score": 0.2143649922522453
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_001_SC_002",
+        "episode_id": "THE_LAST_PROMISE_EP_001",
+        "scene_index": 2,
+        "start_time": "00:00:38",
+        "end_time": "00:01:11",
+        "speaker": "MAYA",
+        "text": "MAYA: Why is my mother's ring in your pocket? ARJUN: Because she asked me to protect it until the truth came out. MAYA: What truth? She died believing you betrayed us.",
+        "source_line_start": 9,
+        "source_line_end": 12
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_004",
+      "episode_number": 4,
+      "episode_title": "The Final Signature",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.20992331040348602,
+      "content_score": 0.20992331040348602,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.109315541048849,
+        "char_tfidf": 0.16541601006716058,
+        "token_overlap": 0.5,
+        "fuzzy": 0.5490196078431372,
+        "exact_phrase": 0.0,
+        "content_score": 0.20992331040348602
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_004_SC_002",
+        "episode_id": "THE_LAST_PROMISE_EP_004",
+        "scene_index": 2,
+        "start_time": "00:00:47",
+        "end_time": "00:01:22",
+        "speaker": "MAYA",
+        "text": "MAYA: You transferred every share into my name. Why would you do that? ARJUN: Because I knew you would choose the truth over the money. MAYA: And what did you choose?",
+        "source_line_start": 9,
+        "source_line_end": 12
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_005",
+      "episode_number": 5,
+      "episode_title": "The DNA Result",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.18324124356941057,
+      "content_score": 0.18324124356941057,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.08584928676439571,
+        "char_tfidf": 0.09655853376549794,
+        "token_overlap": 0.5,
+        "fuzzy": 0.425531914893617,
+        "exact_phrase": 0.0,
+        "content_score": 0.18324124356941057
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_005_SC_002",
+        "episode_id": "THE_LAST_PROMISE_EP_005",
+        "scene_index": 2,
+        "start_time": "00:00:40",
+        "end_time": "00:01:14",
+        "speaker": "MAYA",
+        "text": "MAYA: Your brother is dead. How could his sample be here? TECHNICIAN: Because someone submitted it yesterday under a living person's name. ARJUN: Tell me whose name.",
+        "source_line_start": 9,
+        "source_line_end": 12
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "BILLIONAIRE_NEXT_DOOR",
+      "canonical_title": "Billionaire Next Door",
+      "episode_id": "BILLIONAIRE_NEXT_DOOR_EP_003",
+      "episode_number": 3,
+      "episode_title": "The Balcony Confession",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.17295103902433134,
+      "content_score": 0.17295103902433134,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.04229479693956716,
+        "char_tfidf": 0.06184818787917559,
+        "token_overlap": 0.5,
+        "fuzzy": 0.45833333333333337,
+        "exact_phrase": 0.0,
+        "content_score": 0.17295103902433134
+      },
+      "evidence": {
+        "evidence_id": "BILLIONAIRE_NEXT_DOOR_EP_003_SC_001",
+        "episode_id": "BILLIONAIRE_NEXT_DOOR_EP_003",
+        "scene_index": 1,
+        "start_time": "00:00:05",
+        "end_time": "00:00:44",
+        "speaker": "TARA",
+        "text": "TARA: You keep saying the marriage is pretend. Then why do you look jealous? ADRIAN: Because the man downstairs knows a secret I promised never to tell. TARA: What secret?",
+        "source_line_start": 4,
+        "source_line_end": 7
+      },
+      "retrieval_mode": "lexical-baseline"
+    },
+    {
+      "show_id": "THE_LAST_PROMISE",
+      "canonical_title": "The Last Promise",
+      "episode_id": "THE_LAST_PROMISE_EP_002",
+      "episode_number": 2,
+      "episode_title": "The Hidden Letter",
+      "language": "Unknown",
+      "territory": "Unknown",
+      "release_status": "Unknown",
+      "destination_url": "",
+      "score": 0.09290734067182785,
+      "content_score": 0.09290734067182785,
+      "title_score": 0.0,
+      "component_scores": {
+        "word_tfidf": 0.04835806527585235,
+        "char_tfidf": 0.12700844401508518,
+        "token_overlap": 0.0,
+        "fuzzy": 0.6545454545454545,
+        "exact_phrase": 0.0,
+        "content_score": 0.09290734067182785
+      },
+      "evidence": {
+        "evidence_id": "THE_LAST_PROMISE_EP_002_SC_001",
+        "episode_id": "THE_LAST_PROMISE_EP_002",
+        "scene_index": 1,
+        "start_time": "00:00:04",
+        "end_time": "00:00:42",
+        "speaker": "MAYA",
+        "text": "MAYA: This letter has my father's handwriting, but it is dated after his funeral. ARJUN: Read the last line before you decide I lied to you. MAYA: If Arjun returns, give him the key to room seventeen.",
+        "source_line_start": 4,
+        "source_line_end": 7
+      },
+      "retrieval_mode": "lexical-baseline"
+    }
+  ],
+  "catalogue_validation": {
+    "episodes": 11,
+    "shows": 3
+  }
+}

@@ -1,0 +1,31 @@
+promo_id,displayed_title,transcript,caption,expected_episode_id,case_type
+G001,The Last Promise,Stop the ceremony! This groom is already married.,,THE_LAST_PROMISE_EP_001,positive
+G002,The Last Promise,"This letter has my father's handwriting, but it is dated after his funeral.",,THE_LAST_PROMISE_EP_002,positive
+G003,The Last Promise,The DNA report is conclusive. The child is Arjun's biological son.,,THE_LAST_PROMISE_EP_003,positive
+G004,The Last Promise,"This court recognises the original marriage agreement, not the forged copy.",,THE_LAST_PROMISE_EP_004,positive
+G005,The Last Promise,The sample was switched before testing. The result naming Arjun as the father is false.,,THE_LAST_PROMISE_EP_005,positive
+G006,Heir to the Crown,The royal bloodline ends tonight unless the missing prince is found.,,HEIR_TO_THE_CROWN_EP_001,positive
+G007,Heir to the Crown,The family portrait has six children. The official record says five.,,HEIR_TO_THE_CROWN_EP_002,positive
+G008,Heir to the Crown,This ring has my mother's initials inside.,,HEIR_TO_THE_CROWN_EP_003,positive
+G009,Billionaire Next Door,You said this was apartment 1204. Why does the owner have a helicopter?,,BILLIONAIRE_NEXT_DOOR_EP_001,positive
+G010,Billionaire Next Door,This contract says I have to pretend to be your fiancée for thirty days.,,BILLIONAIRE_NEXT_DOOR_EP_002,positive
+G011,Billionaire Next Door,You keep saying the marriage is pretend. Then why do you look jealous?,,BILLIONAIRE_NEXT_DOOR_EP_003,positive
+G012,The Last Promise,Because the child in that photograph is standing behind you.,,THE_LAST_PROMISE_EP_002,positive
+G013,The Last Promise,The person who paid the hospital to change the first DNA report.,,THE_LAST_PROMISE_EP_003,positive
+G014,Heir to the Crown,"Then kneel, Your Highness. Your execution order has just been signed.",,HEIR_TO_THE_CROWN_EP_002,positive
+G015,Billionaire Next Door,It says the agreement becomes permanent if either party falls in love.,,BILLIONAIRE_NEXT_DOOR_EP_002,positive
+G016,The Last Promise,The groom cannot marry her because he already has a wife.,,THE_LAST_PROMISE_EP_001,positive
+G017,The Last Promise,The child shown in that picture is the reason he agreed to wed her.,,THE_LAST_PROMISE_EP_002,positive
+G018,Heir to the Crown,The queen says the royal family will end if nobody finds the prince who disappeared.,,HEIR_TO_THE_CROWN_EP_001,positive
+G019,Heir to the Crown,The poison is hidden in the golden crown itself.,,HEIR_TO_THE_CROWN_EP_003,positive
+G020,Billionaire Next Door,She has to act as his future wife for thirty days under the contract.,,BILLIONAIRE_NEXT_DOOR_EP_002,positive
+G021,The Last Promise,Tell me the truth before this is over.,,,ambiguous
+G022,Heir to the Crown,You must tell me who I really am and why you hid everything.,,,ambiguous
+G023,Billionaire Next Door,I know you are hiding a secret from me. What happens next?,,,ambiguous
+G024,,The door is open and someone is standing outside. Nobody knows who it is.,,,ambiguous
+G025,,She looked at him and asked whether he would come back tomorrow.,,,ambiguous
+G026,,A spaceship captain discovers a new planet after the engine fails.,,,negative
+G027,,The chef adds two spoons of sugar and puts the cake into the oven.,,,negative
+G028,,The football team scores in the final minute and wins the championship.,,,negative
+G029,,A detective follows a red car through the city to find a missing diamond necklace.,,,negative
+G030,,The robot learns to paint portraits while travelling across the ocean.,,,negative
