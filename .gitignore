@@ -10,3 +10,4 @@ raw_outputs/*
 !raw_outputs/evaluation_run.json
 *.sqlite3
 .DS_Store
+Submission Files/

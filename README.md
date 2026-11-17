@@ -2,8 +2,8 @@
 
 **PromoBridge maps a promotional creative to the most likely canonical show and episode, displays the screenplay evidence that supports the match, flags uncertainty, and exports a traceable handoff manifest.**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=jinay-mehta/PromoBridge&branch=main&mainModule=app.py)  
-🚀 **Live Prototype Deployment:** [Launch PromoBridge on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=jinay-mehta/PromoBridge&branch=main&mainModule=app.py)  
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://promobridge.streamlit.app/)  
+🚀 **Live Web App:** [https://promobridge.streamlit.app](https://promobridge.streamlit.app/)  
 📦 **GitHub Repository:** [https://github.com/jinay-mehta/PromoBridge](https://github.com/jinay-mehta/PromoBridge)
 
 > **Screenplay Pack Note:** The prototype ships with the actual **Kuku screenplay pack** for *"I Married a Broken Soldier. He was a Duke"* (50 episodes, 2,000+ evidence spans with scene timestamps and character dialogue beats), plus 11 synthetic benchmark episodes across three other shows. You can also upload custom screenplay files or full ZIP packs in the Catalogue tab.
@@ -34,7 +34,7 @@ The prototype does **not** diagnose Kuku's internal root cause, repair the consu
 
 1. Install Python 3.11 or newer.
 2. Extract the ZIP into a writable folder.
-3. Double-click `run_windows.bat` or run these commands in PowerShell:
+3. Run these commands in PowerShell or your terminal:
 
 ```powershell
 py -3 -m venv .venv
@@ -139,7 +139,7 @@ python -m evaluation.run_eval
 python -m pytest -q
 ```
 
-The script writes case-level results to `raw_outputs/evaluation_run.json`. The current core test suite contains nine tests covering catalogue loading, exact-match retrieval, abstention, timestamp parsing, DOCX ingestion, saved-catalogue round-trip, duplicate IDs and unsafe destination URLs.
+The script writes case-level results to `raw_outputs/evaluation_run.json`. The current core test suite contains 10 tests covering catalogue loading, Kuku screenplay pack integration, exact-match retrieval, abstention, timestamp parsing, DOCX ingestion, saved-catalogue round-trip, duplicate IDs and unsafe destination URLs.
 
 **Latest local synthetic evaluation:**
 
@@ -159,15 +159,17 @@ PromoBridge/
 ├── app.py                       # Streamlit UI and session workflow
 ├── cli.py                       # Repeatable command-line matcher
 ├── src/
-│   ├── ingest.py                # TXT / DOCX / PDF / JSON parser
+│   ├── ingest.py                # TXT / DOCX / PDF / JSON / ZIP parser
 │   ├── catalogue.py             # Catalogue loading, editing, validation
 │   ├── scoring.py               # Retrieval score and abstention rules
 │   └── export.py                # CSV / JSON manifest contracts
-├── data/sample_catalogue/       # Synthetic demo scripts
+├── data/
+│   ├── sample_catalogue/        # Synthetic demo scripts (11 episodes)
+│   └── kuku_screenplay_pack/    # Kuku "I Married a Broken Soldier" (50 episodes)
 ├── evaluation/gold_set.csv      # 30 labelled synthetic test cases
 ├── evaluation/run_eval.py       # Repeatable evaluation runner
 ├── raw_outputs/                 # Demo and local run outputs
-├── tests/test_core.py           # Unit tests
+├── tests/test_core.py           # Unit tests (10 passing tests)
 ├── requirements.txt
 └── README.md
 ```
@@ -188,16 +190,3 @@ python cli.py --catalogue-dir "./my_screenplays" --transcript "paste promo dialo
 
 Add `--semantic` after installing `requirements-semantic.txt` to use local embeddings from the CLI.
 
-## 10. Known limitations and next steps
-
-**Known limitations:** lexical matching can miss paraphrases; timestamps depend on screenplay formatting; each uploaded file is treated as one episode; no cross-language semantic matching; no video OCR / audio transcription; session edits are not a shared database; regional release availability and deep-link resolution are not verified; the synthetic gold set is small and authored by the prototype builder.
-
-**Next steps for a real pilot:** label 30–100 real promo-to-episode examples; add sentence-transformer retrieval behind the same retrieval interface; create a human-reviewed alias registry; validate destination URLs against an authoritative catalogue; add versioned persistent storage; measure top-1 / top-3 accuracy, false confident matches, evidence validity, operator handling time and actual first-episode starts from campaign click-throughs.
-
-## 11. Privacy and responsible use
-
-- App matching is local by default; do not upload confidential scripts to public hosting.
-- 100% deterministic local Python pipeline; zero external LLM API calls or third-party data sharing.
-- Do not commit `.env`, Streamlit secrets, private screenplays, or raw outputs containing restricted source text.
-- Preserve input originals; only parsed and normalized derived records are used for retrieval.
-- A human remains responsible for approving campaign mappings.
